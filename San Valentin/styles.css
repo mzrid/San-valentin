@@ -249,31 +249,21 @@ main{
     0% {
         transform: scale(0) /*rotate(0deg)*/;
         opacity: 1;
-        top: 50%;
-        left: 50%;
     }
     25% {
         transform: scale(35) /*rotate(90deg)*/;
-        top: 20%;
-        left: 20%;
         opacity: 0.8;
     }
     50% {
         transform: scale(40) /*rotate(180deg)*/;
-        top: 10%;
-        left: 80%;
         opacity: 0.5;
     }
     75% {
         transform: scale(40) /*rotate(270deg)*/;
-        top: 70%;
-        left: 60%;
         opacity: 0.3;
     }
     100% {
         transform: scale(0) /*rotate(360deg)*/;
-        top: 90%;
-        left: 90%;
         opacity: 0.2;
     }
 }

@@ -167,8 +167,8 @@ main{
     text-align: center;
 }
 .hammsterimg img{
-    height:30vw;
-    width: 20vw;
+    height:80vw;
+    width: 60vw;
 }
 .spin{
     z-index: 1;

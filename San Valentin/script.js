@@ -19,7 +19,7 @@ const positivo=()=>{
 }
 
 const negativo=()=>{
-    if(contBtns.children.length < 10){
+    if(contBtns.children.length < 50){
         newBtn = btnNo.cloneNode(true);
         newBtn.classList.add("randomNo")
 

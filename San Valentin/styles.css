@@ -166,8 +166,11 @@ main{
     letter-spacing: 5px;
     text-align: center;
 }
+.hammsterimg img{
+    height:30vw;
+    width: 20vw;
+}
 .spin{
-    scale:0.2;
     z-index: 1;
     animation: appear 2s forwards;
 }

@@ -167,7 +167,7 @@ main{
     text-align: center;
 }
 .spin{
-    scale:0.5;
+    scale:0.2;
     z-index: 1;
     animation: appear 2s forwards;
 }

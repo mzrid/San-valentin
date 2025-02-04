@@ -1,0 +1,288 @@
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, p, div{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height: 100vh;
+    background: rgb(251 200 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title h1{
+    color: rgb(247 4 36);
+    font-size: 5vw;
+    font-family: sanValentin;
+    line-height: 1.5;
+	font-weight: 10;
+}
+
+.card-btns{
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-btns button{
+    height: 5vw;
+    width: 8vw;
+    border: none;
+    border-radius: 10px;
+    font-size: 2vw;
+    font-family: darling;
+    text-align: center;
+    color: rgb(247 4 36);
+    cursor: pointer;
+    line-height: 3;
+}
+.container-hearts{
+    transform: rotate(-45deg);
+}
+.heart{
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    position: absolute;
+    scale: 0;
+}
+
+.heart::before,
+.heart::after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before{
+    top: -12px;
+    left: 0;
+}
+
+.heart::after{
+    top: 0;
+    left: 12px;
+}
+
+.heart:nth-child(1), 
+.heart:nth-child(1)::before,
+.heart:nth-child(1)::after{
+    animation-delay: 0s;
+    background-color: rgb(247, 93, 201);
+}
+
+.heart:nth-child(2), 
+.heart:nth-child(2)::before,
+.heart:nth-child(2)::after{
+    animation-delay: 0.5s;
+    background-color: rgb(255, 0, 0);
+    
+}
+
+.heart:nth-child(3), 
+.heart:nth-child(3)::before,
+.heart:nth-child(3)::after {
+    animation-delay: 1s;
+    background-color: rgb(247, 93, 201);
+}
+
+.heart:nth-child(4), 
+.heart:nth-child(4)::before,
+.heart:nth-child(4)::after {
+    background-color: rgb(255, 0, 0);
+    animation-delay: 1.5s;
+}
+
+.heart:nth-child(5), 
+.heart:nth-child(5)::before,
+.heart:nth-child(5)::after {
+    background-color: rgb(247, 93, 201);
+    animation-delay: 2s;
+}
+
+.heart:nth-child(6), 
+.heart:nth-child(6)::before,
+.heart:nth-child(6)::after {
+    background-color: rgb(255, 0, 0);
+    animation-delay: 2.5s;
+}
+.heart:nth-child(7), 
+.heart:nth-child(7)::before,
+.heart:nth-child(7)::after {
+    background-color: rgb(247, 93, 201);
+    animation-delay: 3s;
+}
+.heart:nth-child(8), 
+.heart:nth-child(8)::before,
+.heart:nth-child(8)::after {
+    background-color: rgb(255, 0, 0);
+    animation-delay: 3.5s;
+}
+.heart:nth-child(9), 
+.heart:nth-child(9)::before,
+.heart:nth-child(9)::after {
+    background-color: rgb(247, 93, 201);
+    animation-delay: 4s;
+}
+.text{
+    font-family: darling;
+    transition: 4s;
+    color: rgb(226, 226, 226);
+    font-size: 0;
+    opacity: 0;
+}
+
+.hammsterimg{
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hammsterimg h1{
+    position: absolute;
+    color: rgb(212, 212, 212);
+    opacity: 0.8;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.spin{
+    z-index: 1;
+    animation: appear 2s forwards;
+}
+
+.randomNo{
+    position: absolute;
+    top:20px;
+    left: 200px;
+}
+
+.grow{
+    opacity: 1;
+    position: absolute;
+    font-size: 10vw;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(8, 255, 214, 0.267), 2px 2px 10px rgba(8, 255, 214, 0.267);
+}
+
+.animate{
+    scale: 1;
+    animation: scaleRotateMove 4s ease-out infinite;
+}
+
+@keyframes appear {
+    0%{
+        scale: 0;
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(360deg);
+    }
+    20%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(360deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    70%{
+        transform: rotate(360deg);
+    }
+    80%{
+        transform: rotate(0deg);
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100%{
+        scale: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(70); /* Ajusta el tamaño del corazón */
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+}
+
+@keyframes scaleRotateMove {
+    0% {
+        transform: scale(0) /*rotate(0deg)*/;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+    25% {
+        transform: scale(35) /*rotate(90deg)*/;
+        top: 20%;
+        left: 20%;
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(70) /*rotate(180deg)*/;
+        top: 10%;
+        left: 80%;
+        opacity: 0.5;
+    }
+    75% {
+        transform: scale(40) /*rotate(270deg)*/;
+        top: 70%;
+        left: 60%;
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0) /*rotate(360deg)*/;
+        top: 90%;
+        left: 90%;
+        opacity: 0.2;
+    }
+}
+
+@font-face {
+    font-family: sanValentin;
+    src: url(Metalina.ttf);
+}
+
+@font-face {
+    font-family: darling;
+    src: url(DarlingGirlDemoRegular.ttf);
+}

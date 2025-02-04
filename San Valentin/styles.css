@@ -29,7 +29,7 @@ main{
 
 .card-title h1{
     color: rgb(247 4 36);
-    font-size: 6vw;
+    font-size: 7vw;
     font-family: sanValentin;
     line-height: 1.5;
 	font-weight: 10;
@@ -167,6 +167,7 @@ main{
     text-align: center;
 }
 .spin{
+    scale:0.5;
     z-index: 1;
     animation: appear 2s forwards;
 }
@@ -258,7 +259,7 @@ main{
         opacity: 0.8;
     }
     50% {
-        transform: scale(70) /*rotate(180deg)*/;
+        transform: scale(40) /*rotate(180deg)*/;
         top: 10%;
         left: 80%;
         opacity: 0.5;
